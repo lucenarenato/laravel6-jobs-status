@@ -1,5 +1,7 @@
 # Laravel 6.2
 
+![tela](laravel-6.png) 
+
 > Exemplos de como usar o novo recurso do laravel 6 chamado Lazy collections class.
 > Lazy Collection é uma classe que fornece iteradores para os itens da matriz. Se você souber no Laravel 5, temos uma classe Collection que é usada para agrupar itens da matriz. então basicamente no Laravel 6 temos uma classe Lazy Collection adicional aqui junto com a classe Normal Collection.
 
@@ -56,3 +58,9 @@ You should see te following result after clicking on the "Click here to view the
 > Status jobs
 - https://packagist.org/packages/imtigger/laravel-job-status
 - https://laravel.com/docs/6.x/horizon
+- https://laravel.com/docs/6.x/telescope
+
+![tela1](tabela-jobs.png) 
+
+> @cpdrenato
+## Renato lucena - 2020

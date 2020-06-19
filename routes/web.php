@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
-use \App\{Post, PostImage};
+//use \App\{Post, PostImage};
 
 Route::get('/', function() {
     return view('welcome');
@@ -23,14 +23,10 @@ Route::get('/', function() {
 Route::get('/tela', function(){
     return view('tailwind');
 });
-// TODO: Remove
+// TODO: Remove - test de jobs
 Route::get('/test', function () {
     TestJob::dispatch(12);
 });
-
-//Route::resource('logs', 'JobLogController')->middleware('role:admin')->only(['index', 'show', 'destroy']);
-
-//Route::resource('progress', 'ProgressController');
 
 Route::group(['middleware' => 'auth.is_admin'], function($router) {
     $router->get('/chart', 'ChartController@index')->name('chart');
@@ -40,7 +36,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['middleware'=>['web', 'auth']], function (){
+/*Route::group(['middleware'=>['web', 'auth']], function (){
     Route::resource('logs', 'JobLogController')->only(['index', 'show', 'destroy']);
     Route::get('/logs/{type}/{id}', 'JobLogController@showGroup');
     Route::get('/jobs', 'JobController@index')->name('jobs.index');
@@ -50,4 +46,7 @@ Route::group(['middleware'=>['web', 'auth']], function (){
     Route::post('/job/{job}', 'JobController@store');
 
     Route::get('/dummyJob', 'JobController@dummyJob')->name('dummyJob');
-});
+});*/
+//Route::resource('logs', 'JobLogController')->middleware('role:admin')->only(['index', 'show', 'destroy']);
+
+//Route::resource('progress', 'ProgressController');
